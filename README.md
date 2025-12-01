@@ -2,13 +2,15 @@
 
 > Describe what you want to build. Let agents build it.
 
-Autonomous multi-agent Python project template. *Part of [Bot Brewers](https://github.com/bot-brewers).*
+An autonomous Python project template that bootstraps itself into production-ready code through a multi-agent workflow.
 
 ## Why This Template?
 
-**The Problem:** Starting AI/ML projects requires extensive setup—architecture decisions, project structure, testing patterns, CI/CD, logging, and more. Most developers copy-paste from old projects or spend days configuring from scratch.
+Starting an AI/ML project means three days of ceremony before writing real code. Project structure. Logging. Tests. CI/CD. Type hints. Pre-commit hooks.
 
-**The Solution:** This template **bootstraps itself** into a complete, production-ready project through a multi-agent workflow. You describe your project in plain language; agents research, plan, and build it.
+Most developers copy-paste from old repos or configure from scratch. Both approaches carry technical debt from day one.
+
+This template bootstraps itself. Describe the project in two seed files; agents research, plan, and implement it with production patterns built in.
 
 ## How It Works
 
@@ -54,14 +56,14 @@ Autonomous multi-agent Python project template. *Part of [Bot Brewers](https://g
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**Human-in-the-loop**: You approve each phase before continuing. No runaway automation.
+You approve each phase before continuing.
 
 ## Quick Start
 
 1. **Create your repository**: Click "Use this template" on GitHub
 2. **Set up environment**: `make init`
 3. **Fill out your seeds**: Edit `context/PRODUCT.md` and `context/ENGINEERING.md`
-4. **Start brewing**: In Claude Code, say `"Run the project initialization workflow"`
+4. **Start building**: In Claude Code, say `"Run the project initialization workflow"`
 
 ### Filling Out Seeds
 
@@ -79,32 +81,26 @@ See `workflows/PROJECT_INIT_WORKFLOW.md` for the complete workflow specification
 
 ## What You Get
 
-Beyond the autonomous workflow, this template provides a **production-ready foundation**:
+The autonomous workflow is the main attraction, but the template also provides a production-ready foundation:
 
 ### Modern Python Tooling
-- Python 3.12+, FastAPI, Pydantic
-- Type hints throughout
+- Python 3.12+ with type hints throughout
 - uv for fast dependency management
+- Ready for any framework you choose
 
 ### Production Logging
-- Structured JSON logging with structlog
-- Correlation ID tracking across requests
-- Dual-mode: human-readable (dev) / JSON (prod)
+Structured JSON logging with structlog. Correlation ID tracking. Dual-mode output: human-readable for development, JSON for production.
 
 ### Development Automation
-- Pre-configured linting (Ruff), formatting (Black), type checking (mypy)
-- Pre-commit hooks for quality gates
-- `make validate-branch` runs all checks
+- Ruff (linting), Black (formatting), mypy (types)
+- Pre-commit hooks as quality gates
+- `make validate-branch` runs everything
 
-### Testing Patterns
-- Unit, functional, and integration test structure
-- pytest with markers for test organization
-- 21+ logging system tests included as examples
+### Testing Structure
+Unit, functional, and integration test directories with pytest markers. The logging system alone has 21+ tests as examples.
 
 ### CI/CD Ready
-- GitHub Actions workflows
-- Semantic versioning
-- Docker-ready structure
+GitHub Actions workflows included. Semantic versioning. Docker-ready structure.
 
 ## Project Structure
 
@@ -166,14 +162,9 @@ The autonomous workflow ensures these patterns are built in from the start, not 
 
 ## Who Should Use This
 
-### Teams Starting AI/ML Projects
-Stop reinventing infrastructure. Describe your project and let agents build a production-ready foundation.
+Starting an AI/ML project and don't want to spend days on infrastructure? This is for you. Senior engineer who expects production-grade tooling from day one? This is for you. Leading a team and want a consistent starting point that embodies engineering discipline? This is for you.
 
-### Senior Engineers New to AI
-Get the safety rails you're accustomed to in production systems while learning AI concepts.
-
-### Technical Leaders
-Give your team a consistent, production-ready starting point that embodies engineering best practices.
+The common thread: reliability over speed, describing what you want over configuring it manually.
 
 ## Learn More
 
@@ -187,18 +178,14 @@ Give your team a consistent, production-ready starting point that embodies engin
 - [Hidden Technical Debt in ML Systems](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)
 
 ### Technologies
-- [FastAPI](https://fastapi.tiangolo.com/) - Modern Python web framework
-- [Pydantic](https://docs.pydantic.dev/) - Data validation
 - [structlog](https://www.structlog.org/) - Structured logging
 - [uv](https://docs.astral.sh/uv/) - Fast Python package management
+- [pytest](https://docs.pytest.org/) - Testing framework
+- [Ruff](https://docs.astral.sh/ruff/) - Fast Python linter
 
 ## Contributing
 
-When contributing, prioritize:
-1. **Reliability over features**
-2. **Simplicity over cleverness**
-3. **Documentation over assumptions**
-4. **Tests over trust**
+Prioritize reliability over features, simplicity over cleverness, documentation over assumptions, tests over trust.
 
 ## License
 
